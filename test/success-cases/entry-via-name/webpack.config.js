@@ -12,6 +12,8 @@ var paths = [
 ];
 
 module.exports = {
+  mode: 'development',
+
   entry: {
     CUSTOM_NAME: __dirname + '/index.js'
   },
@@ -19,6 +21,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: __dirname + '/actual-output',
+    globalObject: 'this',
     libraryTarget: 'umd'
   },
 

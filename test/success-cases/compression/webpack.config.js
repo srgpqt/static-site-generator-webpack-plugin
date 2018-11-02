@@ -6,11 +6,14 @@ var fs = require('fs');
 var template = ejs.compile(fs.readFileSync(__dirname + '/template.ejs', 'utf-8'))
 
 module.exports = {
+  mode: 'development',
+
   entry: __dirname + '/index.js',
 
   output: {
     filename: 'index.js',
     path: __dirname + '/actual-output',
+    globalObject: 'this',
     libraryTarget: 'umd'
   },
 

@@ -11,12 +11,15 @@ var paths = [
 ];
 
 module.exports = {
+  mode: 'development',
+
   entry: __dirname + '/index.js',
 
   output: {
     filename: 'index.js',
     path: __dirname + '/actual-output',
     publicPath: '/',
+    globalObject: 'this',
     libraryTarget: 'umd'
   },
 

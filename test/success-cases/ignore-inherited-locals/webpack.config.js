@@ -9,12 +9,15 @@ var locals = Object.create(localsProto);
 locals.template = template;
 
 module.exports = {
+  mode: 'development',
+
   entry: __dirname + '/index.js',
 
   output: {
     filename: 'index.js',
     path: __dirname + '/actual-output',
     publicPath: '/',
+    globalObject: 'this',
     libraryTarget: 'umd'
   },
 
