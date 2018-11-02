@@ -33,7 +33,11 @@ module.exports = {
     /* IMPORTANT!
      * You must compile to UMD or CommonJS
      * so it can be required in a Node context: */
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    /* IMPORTANT!
+     * Webpack 4 UMD target is broken ; set globalObject to 'this' as workaround
+     * See https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130 */
+    globalObject: 'this'
   },
 
   plugins: [
