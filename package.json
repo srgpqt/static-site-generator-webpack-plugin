@@ -4,7 +4,7 @@
   "description": "Minimal, unopinionated static site generator powered by webpack",
   "main": "index.js",
   "scripts": {
-    "test": "jest test",
+    "test": "jest test --env node",
     "coverage": "jest --coverage",
     "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
