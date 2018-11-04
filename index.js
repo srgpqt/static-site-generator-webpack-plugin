@@ -6,10 +6,6 @@ var url = require('url');
 var Promise = require('bluebird');
 
 function StaticSiteGeneratorWebpackPlugin(options) {
-  if (arguments.length > 1) {
-    options = legacyArgsToOptions.apply(null, arguments);
-  }
-
   options = options || {};
 
   this.entry = options.entry;
@@ -217,15 +213,6 @@ function relativePathsFromHtml(options) {
     .filter(function(href) {
       return href != null;
     });
-}
-
-function legacyArgsToOptions(entry, paths, locals, globals) {
-  return {
-    entry: entry,
-    paths: paths,
-    locals: locals,
-    globals: globals
-  };
 }
 
 function addThisCompilationHandler(compiler, callback) {
