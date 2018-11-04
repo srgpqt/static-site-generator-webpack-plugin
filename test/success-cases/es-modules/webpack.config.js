@@ -13,7 +13,7 @@ var paths = [
 module.exports = {
   mode: 'development',
 
-  entry: __dirname + '/index.js',
+  entry: __dirname + '/index.ts',
 
   output: {
     filename: 'index.js',
@@ -26,12 +26,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
-        }
+        loader: 'ts-loader',
       }
     ]
   },
